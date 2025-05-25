@@ -1,8 +1,5 @@
-const isDevelopment = import.meta.env.MODE === 'development';
-
-export const API_BASE_URL = isDevelopment 
-  ? 'http://localhost:3002'
-  : 'https://cashmate-mo8a.onrender.com'; // Replace with your actual backend URL
+// API Base URL
+export const API_BASE_URL = 'https://cashmate-backend.vercel.app';
 
 export const API_ENDPOINTS = {
   login: '/api/auth/login',
