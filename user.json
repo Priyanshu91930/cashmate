@@ -1,0 +1,19 @@
+{
+  "name": "saiyam",
+  "email": "saiyam@gmail.com",
+  "phone": "+919193345922",
+  "password": "saiyam123",
+  "studentId": "ST2025773",
+  "profilePhoto": "uploads/profilePhoto-1745340493820-661713271.jpg",
+  "pdf": "uploads/pdf-1745340493824-977902480.pdf",
+  "course": "mca",
+  "section": "d",
+  "semester": "2",
+  "fatherName": "gs",
+  "location": {},
+  "isOnline": true,
+  "lastSeen": "2025-05-02T16:27:01.379Z",
+  "connections": [],
+  "createdAt": "2025-04-22T17:12:04.571Z",
+  "__v": 0
+} 

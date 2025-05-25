@@ -1,0 +1,53 @@
+{
+  "name": "practice",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@auth0/auth0-react": "^2.3.0",
+    "@clerk/clerk-react": "^5.31.6",
+    "@clerk/clerk-sdk-node": "^4.13.23",
+    "@radix-ui/react-checkbox": "^1.1.4",
+    "@react-google-maps/api": "^2.20.6",
+    "@tensorflow-models/mobilenet": "^2.1.1",
+    "@tensorflow/tfjs": "^4.22.0",
+    "axios": "^1.9.0",
+    "date-fns": "^4.1.0",
+    "firebase": "^11.5.0",
+    "framer-motion": "^10.18.0",
+    "geofire-common": "^6.0.0",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.323.0",
+    "pdfjs-dist": "^4.10.38",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.4.0",
+    "react-leaflet": "^4.2.1",
+    "react-map-gl": "^7.1.9",
+    "react-router-dom": "^7.6.0",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "tesseract.js": "^6.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.14.0",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.0.5"
+  }
+}
