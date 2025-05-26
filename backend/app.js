@@ -23,24 +23,28 @@ const app = express();
 // Comprehensive CORS configuration
 const corsOptions = {
   origin: function (origin, callback) {
-    // List of allowed origins
+    // In development, allow all origins
+    if (process.env.NODE_ENV === 'development') {
+      callback(null, true);
+      return;
+    }
+
+    // List of allowed origins for production
     const allowedOrigins = [
-      'http://localhost:3000', 
-      'https://localhost:3000', 
-      'http://127.0.0.1:3000', 
-      'http://localhost:5173',  // Vite dev server
-      'http://127.0.0.1:5173',
-      undefined // Allow undefined origin (like mobile apps)
+      'https://cashmate-3qtj.vercel.app', // Your Vercel domain
+      'https://cashmate-3qtj.vercel.app', // Without trailing slash
+      'http://cashmate-3qtj.vercel.app',  // HTTP version
     ];
 
-    // Always allow requests during development
+    // Check if origin is allowed
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
-      console.error(`CORS blocked for origin: ${origin}`);
+      console.log(`Blocked origin: ${origin}`); // Log blocked origins
       callback(new Error('Not allowed by CORS'));
     }
   },
+  credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'HEAD'],
   allowedHeaders: [
     'Content-Type', 
@@ -51,14 +55,13 @@ const corsOptions = {
     'Access-Control-Request-Method',
     'Access-Control-Request-Headers'
   ],
-  credentials: true,
   optionsSuccessStatus: 200
 };
 
-// Apply CORS middleware
+// Apply CORS middleware before any routes
 app.use(cors(corsOptions));
 
-// Explicit OPTIONS handler
+// Enable pre-flight across-the-board
 app.options('*', cors(corsOptions));
 
 const server = http.createServer(app);
@@ -72,6 +75,17 @@ app.set('io', io);
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Enable pre-flight requests for all routes
+app.options('*', cors(corsOptions));
+
+// Add security headers
+app.use((req, res, next) => {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'DENY');
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+  next();
+});
 
 // Detailed logging middleware
 app.use((req, res, next) => {
