@@ -2,7 +2,8 @@ import axios from 'axios';
 
 // Detailed Axios configuration with relative URLs (using Vite proxy)
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:3002',
+  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:3002',
+
   timeout: 15000, // 15 seconds timeout
   withCredentials: true,
   headers: {
