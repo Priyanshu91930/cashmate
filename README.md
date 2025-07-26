@@ -74,6 +74,7 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 Made with ❤️ by Priyanshu Solanki
 
-📧 Email: priyanshusolanki91930@gmail.com
-🔗 LinkedIn: Your LinkedIn
+📧 Email: priyanshusolanki94@gmail.com
+🔗 LinkedIn:
+https://www.linkedin.com/in/priyanshu-solanki-625b81301
 
