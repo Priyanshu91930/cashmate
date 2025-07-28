@@ -1,6 +1,9 @@
 
 # 💸 CashMate – UPI-Cash Exchange Platform for Students
 
+<img width="1913" height="877" alt="image" src="https://github.com/user-attachments/assets/b4903ed2-c61e-4666-98ac-db9a7610e8f2" />
+
+
 CashMate is a real-time web application designed to help students exchange UPI money for cash conveniently and securely on campus. Whether you're out of physical currency or need digital funds quickly, CashMate connects students in need with those who can help.
 
 ## 🚀 Features
